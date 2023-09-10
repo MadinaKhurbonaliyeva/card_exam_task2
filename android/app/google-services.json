@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "335769542085",
+    "project_id": "card-exam-dart",
+    "storage_bucket": "card-exam-dart.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:335769542085:android:3bb399028a35fd57cf7fac",
+        "android_client_info": {
+          "package_name": "com.example.card_exam_task2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "335769542085-iq42g5b8oajv0srkrtnnuuecnvedvmr9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4R6ow3d8fTbJ6ymmhvpnutabRDDU_uJ0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "335769542085-iq42g5b8oajv0srkrtnnuuecnvedvmr9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
