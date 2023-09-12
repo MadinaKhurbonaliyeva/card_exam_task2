@@ -52,7 +52,6 @@ class _CardPageState extends State<CardPage> {
         itemBuilder: (context, index) {
 
           return ListTile(
-
             title: CreditCardWidget(
               cardNumber: bankCards[index].number,
               expiryDate: bankCards[index].date,
