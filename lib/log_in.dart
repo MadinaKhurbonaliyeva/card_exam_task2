@@ -92,7 +92,7 @@ class _LoginState extends State<Login> {
               InkWell(
                 onTap: () {
                   if (formKey.currentState!.validate()) {
-                    // Validation passed, continue with your login logic
+
                     loginBloc.add(
                       CheckUserEvent(
                         email: emailController.text,
@@ -114,9 +114,9 @@ class _LoginState extends State<Login> {
                     borderRadius: BorderRadius.circular(10),
                     color: Colors.blue,
                   ),
-                  child: Row(
+                  child: const Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
+                    children: [
                       Text(
                         'Log in',
                         textScaleFactor: 2,
@@ -126,7 +126,7 @@ class _LoginState extends State<Login> {
                   ),
                 ),
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -138,7 +138,7 @@ class _LoginState extends State<Login> {
                         MaterialPageRoute(
                           builder: (context) => BlocProvider(
                             create: (context) => RegisterBloc()..add(InitialRegisterBloc()),
-                            child:  RegistrPage(),
+                            child:  const RegistrPage(),
                           ),
                         ),
                       );
@@ -171,7 +171,6 @@ Widget regName(String name1) {
 }
 
 bool isValidEmail(String email) {
-  // You can implement your own email validation logic here
-  // For a basic example, I'm checking if it contains "@" symbol
+
   return email.contains('@');
 }

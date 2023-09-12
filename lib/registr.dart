@@ -57,7 +57,7 @@ class _RegistrPageState extends State<RegistrPage> {
                           if (value == null || value.isEmpty) {
                             return 'Name cannot be empty';
                           }
-                          return null; // Return null if the validation is successful
+                          return null;
                         },
                         textInputAction: TextInputAction.next,
                         decoration: const InputDecoration(
@@ -78,7 +78,7 @@ class _RegistrPageState extends State<RegistrPage> {
                           } else if (!isValidEmail(value)) {
                             return 'Please enter a valid email';
                           }
-                          return null; // Return null if the validation is successful
+                          return null;
                         },
                         textInputAction: TextInputAction.next,
                         decoration: const InputDecoration(
@@ -197,7 +197,6 @@ Widget regName(String name1) {
 }
 
 bool isValidEmail(String email) {
-  // You can implement your own email validation logic here
-  // For a basic example, I'm checking if it contains "@" symbol
+
   return email.contains('@');
 }

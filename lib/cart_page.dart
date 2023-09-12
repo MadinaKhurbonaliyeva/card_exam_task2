@@ -71,7 +71,7 @@ class _CardPageState extends State<CardPage> {
             },
             child: const Icon(Icons.add),
           ),
-          const SizedBox(width: 16), // Add spacing between the buttons
+          const SizedBox(width: 16),
           FloatingActionButton(
             onPressed: () {
               _deleteAllCards();
@@ -137,6 +137,7 @@ class _CardPageState extends State<CardPage> {
             children: <Widget>[
               TextFormField(
                 controller: cardNameController,
+                keyboardType: TextInputType.text,
                 decoration: const InputDecoration(labelText: 'Card Name'),
                 onChanged: (value) {
                   cardName = value;
@@ -147,7 +148,7 @@ class _CardPageState extends State<CardPage> {
                 decoration: const InputDecoration(labelText: 'Card Number'),
                 keyboardType: TextInputType.number,
                 inputFormatters: [
-                  FilteringTextInputFormatter.digitsOnly, // Allow only digits
+                  FilteringTextInputFormatter.digitsOnly,
                   LengthLimitingTextInputFormatter(16),
                   CardNumberInputFormatter(),
                 ],
@@ -173,7 +174,7 @@ class _CardPageState extends State<CardPage> {
           actions: <Widget>[
             ElevatedButton(
               onPressed: () {
-                addCart(cardNameController.text, cardNumberController.text, cardNameController.text);
+                addCart(cardNameController.text, cardNumberController.text, cardDateController.text);
                 if (_validateInputs(cardName, cardNumber, cardDate)) {
                   setState(() {
                     bankCards.add(
@@ -196,6 +197,7 @@ class _CardPageState extends State<CardPage> {
                     ),
                   );
                 }
+
                 cardDateController.clear();
                 cardNameController.clear();
                 cardNumberController.clear();
@@ -216,7 +218,7 @@ class _CardPageState extends State<CardPage> {
   }
 
   bool _validateInputs(String name, String number, String date) {
-    // Remove spaces from the card number
+
     final cleanedCardNumber = number.replaceAll(' ', '');
 
     // Check that the name is not empty, the card number has 16 digits, and the date has the format "MM/yy"
