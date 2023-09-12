@@ -2,13 +2,11 @@ import 'dart:convert';
 
 import 'package:http/http.dart';
 
-Future login(String email, String password) async {
+Future addCart(String cartName ,String cartNumber, String cartDate) async {
   try {
     Response response = await post(
-      Uri.parse('https://cardtask-30e5c-default-rtdb.firebaseio.com/log.json'),
-      body: jsonEncode({"email": email, "password": password}),
-
-
+      Uri.parse('https://cardtask-30e5c-default-rtdb.firebaseio.com/cart.json'),
+      body: jsonEncode({"name":cartName,"cartNumber": cartNumber, "cartDate": cartDate}),
     );
 
     final data = jsonDecode(response.body);
